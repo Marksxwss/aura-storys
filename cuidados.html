@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com a Peça | AURA Curadoria de Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="bg-aura-white">
+    <main id="main-content">
+        <section class="py-32 px-6">
+            <div class="container max-w-3xl">
+                <div class="text-center mb-20 reveal">
+                    <h1 class="text-5xl font-serif mb-6">Preservação e Cuidado</h1>
+                    <p class="text-aura-text-muted font-light text-lg">Como manter a integridade e a pátina de seus objetos.</p>
+                </div>
+
+                <div class="space-y-16">
+                    <div class="reveal">
+                        <h2 class="text-2xl font-serif mb-6">Madeiras Maciças</h2>
+                        <p class="text-aura-text-muted font-light leading-relaxed mb-4">
+                            Evite a exposição direta ao sol intenso e a mudanças bruscas de temperatura. Para a limpeza, utilize apenas um pano de microfibra levemente úmido.
+                        </p>
+                        <p class="text-aura-text-muted font-light leading-relaxed">
+                            Não utilize produtos químicos, álcool ou ceras sintéticas que possam obstruir os poros da madeira ou alterar sua cor natural.
+                        </p>
+                    </div>
+
+                    <div class="reveal delay-1">
+                        <h2 class="text-2xl font-serif mb-6">Cerâmicas e Pedras</h2>
+                        <p class="text-aura-text-muted font-light leading-relaxed mb-4">
+                            Para cerâmicas não vitrificadas, evite o contato com substâncias ácidas ou oleosas que possam penetrar na porosidade do material.
+                        </p>
+                        <p class="text-aura-text-muted font-light leading-relaxed">
+                            Em caso de manchas em pedras naturais, recomendamos a limpeza apenas com água e sabão neutro, secando imediatamente a superfície.
+                        </p>
+                    </div>
+
+                    <div class="reveal delay-2">
+                        <h2 class="text-2xl font-serif mb-6">Metais e Pátinas</h2>
+                        <p class="text-aura-text-muted font-light leading-relaxed">
+                            A oxidação natural de metais é parte da história do objeto. Não recomendamos o polimento abrasivo, que remove a camada de proteção natural e a pátina do tempo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        window.AURA.animations.initScrollReveal();
+    </script>
+</body>
+</html>

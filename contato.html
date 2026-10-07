@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | AURA Curadoria de Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="bg-aura-white">
+    <main id="main-content">
+        <section class="py-32 px-6">
+            <div class="container">
+                <div class="grid-12 gap-20">
+                    <div class="col-5 reveal">
+                        <h1 class="text-5xl font-serif mb-8">Fale Conosco</h1>
+                        <p class="text-aura-text-muted font-light text-lg mb-12 leading-relaxed">
+                            Para orçamentos de peças sob medida, consultoria de curadoria ou dúvidas sobre obras específicas, utilize o formulário ao lado ou nossos canais diretos.
+                        </p>
+                        <div class="space-y-8">
+                            <div class="flex gap-6 items-start">
+                                <span class="text-aura-terracotta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-serif text-lg">E-mail</h4>
+                                    <p class="text-sm text-aura-text-muted font-light">contato@aura.design</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <span class="text-aura-terracotta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.358L8.343 7.642R8.343 7.642 8.343 7.642 8.343 7.642 8.343 7.642 8.343 7.642" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-serif text-lg">Showroom</h4>
+                                    <p class="text-sm text-aura-text-muted font-light">Rua das Artes, 450, Curitiba - PR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 reveal delay-1">
+                        <div class="p-12 border border-aura-border bg-aura-stone/20">
+                            <form id="contact-form" class="space-y-8">
+                                <div class="grid-12 gap-8">
+                                    <div class="col-6">
+                                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Nome</label>
+                                        <input type="text" name="name" required class="w-full p-4 border-b border-aura-border bg-transparent outline-none focus:border-aura-terracotta transition-colors">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">E-mail</label>
+                                        <input type="email" name="email" required class="w-full p-4 border-b border-aura-border bg-transparent outline-none focus:border-aura-terracotta transition-colors">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Assunto</label>
+                                        <select name="subject" class="w-full p-4 border-b border-aura-border bg-transparent outline-none focus:border-aura-terracotta transition-colors appearance-none">
+                                            <option value="curadoria">Consultoria de Curadoria</option>
+                                            <option value="pedido">Dúvida sobre Pedido</option>
+                                            <option value="sob-medida">Peça Sob Medida</option>
+                                            <option value="outros">Outros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="block text-[10px] uppercase tracking-widest font-bold mb-2">Mensagem</label>
+                                        <textarea name="message" rows="6" required class="w-full p-4 border-b border-aura-border bg-transparent outline-none focus:border-aura-terracotta transition-colors resize-none"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-full mt-8">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('button');
+                    const originalText = btn.innerText;
+                    btn.disabled = true;
+                    btn.innerText = 'Enviando...';
+
+                    setTimeout(() => {
+                        btn.innerText = 'Mensagem Enviada!';
+                        btn.classList.add('bg-aura-forest');
+                        setTimeout(() => {
+                            btn.disabled = false;
+                            btn.innerText = originalText;
+                            btn.classList.remove('bg-aura-forest');
+                            form.reset();
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+            window.AURA.animations.initScrollReveal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto | AURA Curadoria de Design</title>
+    <meta name="description" content="Detalhes técnicos, materiais e procedência da peça.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="bg-aura-white">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <main id="main-content">
+        <section class="py-24 px-6">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="mb-12 text-[10px] uppercase tracking-widest text-aura-text-muted flex items-center gap-2">
+                    <a href="../index.html" class="hover:text-aura-text-main transition-colors">Home</a>
+                    <span>/</span>
+                    <a href="loja.html" class="hover:text-aura-text-main transition-colors">Loja</a>
+                    <span>/</span>
+                    <span class="text-aura-text-main">Produto</span>
+                </nav>
+
+                <div class="grid-12 gap-20">
+                    <!-- Galeria de Imagens -->
+                    <div class="col-7 product-gallery reveal">
+                        <!-- Injetado via product.js -->
+                    </div>
+
+                    <!-- Detalhes e Compra -->
+                    <div class="col-5 product-details-sticky reveal delay-1">
+                        <div id="product-info-content">
+                            <!-- Injetado via product.js -->
+                        </div>
+
+                        <!-- Frete Simulado -->
+                        <div class="mt-12 p-6 border border-aura-border bg-aura-stone/30">
+                            <h4 class="text-xs uppercase tracking-widest font-bold mb-4">Calcular Entrega</h4>
+                            <div class="flex gap-4">
+                                <input type="text" id="zip-input" placeholder="00000-000" class="flex-1 p-3 text-sm border border-aura-border outline-none focus:border-aura-terracotta transition-colors">
+                                <button id="zip-btn" class="bg-aura-forest text-white px-6 py-3 text-[10px] uppercase tracking-widest font-bold">Calcular</button>
+                            </div>
+                            <p id="shipping-result" class="mt-4 text-xs text-aura-text-muted font-light"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções Complementares -->
+        <section class="py-24 px-6 border-t border-aura-border">
+            <div class="container">
+                <h3 class="text-3xl font-serif mb-12 text-center">Combina com</h3>
+                <div id="related-products" class="grid-12 gap-10">
+                    <!-- Injetado via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/features/cart.js"></script>
+    <script src="js/features/search.js"></script>
+    <script src="js/features/catalog.js"></script>
+    <script src="js/features/product.js"></script>
+    <script src="js/features/checkout.js"></script>
+    <script src="js/features/forms.js"></script>
+    <script src="js/features/cookies.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

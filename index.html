@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Curadoria de Objetos de Design & Decoração</title>
+    <meta name="description" content="AURA: Curadoria de peças de design contemporâneo. Materiais puros, design honesto e produção artesanal de ateliês brasileiros.">
+
+    <!-- Tipografia Editorial -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <main id="main-content">
+        <!-- Faixa de Aviso Topo -->
+        <div class="bg-aura-forest text-aura-white text-[10px] uppercase tracking-[0.2em] py-2 text-center font-medium">
+            <span id="announcement-bar">Frete grátis para pedidos acima de R$ 599</span>
+        </div>
+
+        <!-- Hero Section Editorial -->
+        <section class="relative min-h-screen flex items-center px-6 lg:px-20 overflow-hidden">
+            <div class="container grid-12 items-center">
+                <div class="col-5 reveal">
+                    <span class="text-aura-terracotta uppercase tracking-[0.3em] text-[10px] font-bold mb-6 block">Curadoria Outono/Inverno 2026</span>
+                    <h1 class="text-6xl lg:text-8xl font-serif leading-[1.05] mb-8">
+                        Forma, matéria <br>e <span class="italic">intenção</span>.
+                    </h1>
+                    <p class="text-lg text-aura-text-muted mb-12 max-w-md leading-relaxed font-light">
+                        Objetos produzidos por ateliês parceiros do Vale do Jequitinhonha e marcenarias do Sul. Design que respeita o tempo da matéria.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="loja.html" class="btn btn-primary">Explorar Catálogo</a>
+                        <a href="sobre.html" class="btn btn-outline">Nossa História</a>
+                    </div>
+                </div>
+                <div class="col-6 offset-1 relative reveal delay-2">
+                    <div class="relative z-10 overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1200"
+                             alt="Luminária Sphere em Travertino"
+                             class="w-full h-auto object-cover">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-aura-stone -z-10 rounded-full opacity-60"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee de Ateliês -->
+        <div class="py-10 border-y border-aura-border overflow-hidden bg-aura-white">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Ateliê Luz & Forma</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Cerâmicas do Vale</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Marcenaria Urbana</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Estúdio Argila</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Ateliê Luz & Forma</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Cerâmicas do Vale</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Marcenaria Urbana</span>
+                    <span class="text-aura-text-muted uppercase tracking-widest text-xs font-medium px-10">Estúdio Argila</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorias Assimetria -->
+        <section id="categorias" class="section container">
+            <div class="grid-12 mb-20 reveal">
+                <div class="col-6">
+                    <h2 class="text-4xl font-serif mb-4">Categorias de Intenção</h2>
+                    <div class="w-12 h-px bg-aura-terracotta mb-6"></div>
+                    <p class="text-aura-text-muted max-w-md font-light">Dividimos nossa curadoria por tipologia de uso, priorizando a harmonia entre função e estética.</p>
+                </div>
+                <div class="col-6 flex justify-end items-center">
+                    <a href="loja.html" class="text-xs uppercase tracking-widest font-bold hover:text-aura-terracotta transition-colors">Ver catálogo completo &rarr;</a>
+                </div>
+            </div>
+
+            <div class="grid-12 gap-10">
+                <!-- Categoria 1 (Destaque maior) -->
+                <a href="loja.html?category=Iluminação" class="col-7 group relative overflow-hidden reveal">
+                    <div class="aspect-video bg-aura-stone overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534349762230-d077a7f8c73c?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-forest/80 via-transparent to-transparent flex items-end p-10">
+                        <h3 class="text-white text-3xl font-serif">Iluminação</h3>
+                    </div>
+                </a>
+                <!-- Categoria 2 -->
+                <a href="loja.html?category=Cerâmicas" class="col-5 group relative overflow-hidden reveal delay-1">
+                    <div class="aspect-square bg-aura-stone overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581783898377-1a97770af957?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-forest/80 via-transparent to-transparent flex items-end p-10">
+                        <h3 class="text-white text-3xl font-serif">Cerâmicas</h3>
+                    </div>
+                </a>
+                <!-- Categoria 3 -->
+                <a href="loja.html?category=Mobiliário" class="col-5 group relative overflow-hidden reveal delay-2">
+                    <div class="aspect-square bg-aura-stone overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594026112284-77417ed9777c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-forest/80 via-transparent to-transparent flex items-end p-10">
+                        <h3 class="text-white text-3xl font-serif">Mobiliário</h3>
+                    </div>
+                </a>
+                <!-- Categoria 4 -->
+                <a href="loja.html?category=Objetos" class="col-7 group relative overflow-hidden reveal delay-3">
+                    <div class="aspect-video bg-aura-stone overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513506007692-efed3ed53f64?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-forest/80 via-transparent to-transparent flex items-end p-10">
+                        <h3 class="text-white text-3xl font-serif">Objetos de Arte</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Lançamentos (Grid Dinâmico) -->
+        <section id="produtos" class="section bg-white">
+            <div class="container">
+                <div class="flex justify-between items-end mb-20 reveal">
+                    <div>
+                        <h2 class="text-4xl font-serif mb-4">Peças Recentes</h2>
+                        <p class="text-aura-text-muted font-light max-w-md">Seleções limitadas produzidas sob demanda em nossos ateliês parceiros.</p>
+                    </div>
+                    <a href="loja.html" class="text-xs uppercase tracking-widest font-bold hover:text-aura-terracotta transition-colors">Ver catálogo completo &rarr;</a>
+                </div>
+                <div class="grid-12 gap-10" id="product-grid">
+                    <!-- Injetado via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto / História -->
+        <section id="sobre" class="section bg-aura-stone overflow-hidden">
+            <div class="container grid-12 items-center gap-20">
+                <div class="col-6 relative reveal">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=1000"
+                         alt="Ateliê AURA" class="shadow-2xl relative z-10">
+                    <div class="absolute -top-10 -left-10 w-full h-full border border-aura-terracotta -z-10"></div>
+                </div>
+                <div class="col-6 reveal delay-2">
+                    <span class="text-aura-terracotta uppercase tracking-[0.3em] text-[10px] font-bold mb-6 block">Desde 2014</span>
+                    <h2 class="text-5xl font-serif mb-8 leading-tight">Design honesto, <br>matéria pura.</h2>
+                    <div class="space-y-6 text-aura-text-muted font-light text-lg">
+                        <p>A AURA nasceu em Curitiba com o propósito de resgatar a relação tátil com os objetos que nos cercam. Recusamos a produção em massa e a estética descartável.</p>
+                        <p>Trabalhamos diretamente com artesãos do Vale do Jequitinhonha e marceneiros locais, garantindo que cada peça carregue a assinatura de quem a criou e a procedência do material.</p>
+                        <p>Nossa seleção não segue tendências; busca a perenidade. Se uma peça não resiste ao tempo ou não possui propósito real, ela não entra em nosso catálogo.</p>
+                    </div>
+                    <a href="sobre.html" class="btn btn-outline mt-12">Conheça nossa trajetória</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios (Lista Compacta e Concreta) -->
+        <section class="py-24 px-6 border-t border-aura-border bg-aura-white">
+            <div class="container grid-12 gap-12">
+                <div class="col-4 reveal">
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-4">Logística Consciente</h4>
+                    <p class="text-sm text-aura-text-muted font-light">Embalagens compostáveis e transporte com compensação de carbono em todas as entregas.</p>
+                </div>
+                <div class="col-4 reveal delay-1">
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-4">Garantia de Origem</h4>
+                    <p class="text-sm text-aura-text-muted font-light">Certificado de procedência e assinatura do artesão em cada peça de cerâmica e mobiliário.</p>
+                </div>
+                <div class="col-4 reveal delay-2">
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-4">Consultoria de Ambientes</h4>
+                    <p class="text-sm text-aura-text-muted font-light">Suporte especializado para a escolha de peças que harmonizem com seu espaço atual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Editorial -->
+        <section class="py-32 px-6 bg-aura-forest text-aura-white text-center relative overflow-hidden">
+            <div class="container max-w-2xl reveal">
+                <h2 class="text-4xl font-serif mb-6">Acompanhe a curadoria</h2>
+                <p class="text-aura-stone-light mb-12 font-light text-lg opacity-80">Receba reflexões sobre design, avisos de novas coleções e acesso prioritário a peças exclusivas.</p>
+                <form data-form="newsletter" class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Seu e-mail" required class="flex-1 bg-transparent border-b border-aura-stone-dark py-4 px-2 outline-none focus:border-aura-terracotta transition-all duration-500 text-aura-white font-light">
+                    <button type="submit" class="bg-aura-white text-aura-forest px-10 py-4 text-[10px] uppercase tracking-widest font-bold hover:bg-aura-terracotta hover:text-white transition-all duration-500">
+                        Inscrever-se
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/features/cart.js"></script>
+    <script src="js/features/search.js"></script>
+    <script src="js/features/catalog.js"></script>
+    <script src="js/features/product.js"></script>
+    <script src="js/features/checkout.js"></script>
+    <script src="js/features/forms.js"></script>
+    <script src="js/features/cookies.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

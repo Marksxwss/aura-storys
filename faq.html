@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | AURA Curadoria de Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="bg-aura-white">
+    <main id="main-content">
+        <section class="py-32 px-6">
+            <div class="container max-w-3xl">
+                <div class="text-center mb-20 reveal">
+                    <h1 class="text-5xl font-serif mb-6">Perguntas Frequentes</h1>
+                    <p class="text-aura-text-muted font-light text-lg">Dúvidas sobre nossos processos, materiais e entregas.</p>
+                </div>
+
+                <div id="faq-list" class="space-y-8">
+                    <!-- Injetado via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('faq-list');
+            if (list) {
+                list.innerHTML = window.AURA_DATA.content.faq.map((item, idx) => `
+                    <div class="border-b border-aura-border pb-8 reveal" style="transition-delay: ${idx * 100}ms">
+                        <button class="faq-trigger w-full text-left flex justify-between items-center group py-4">
+                            <h3 class="text-xl font-serif group-hover:text-aura-terracotta transition-colors">${item.pergunta}</h3>
+                            <span class="faq-icon transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="text-aura-text-muted font-light pt-4 pb-6 leading-relaxed">${item.resposta}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.querySelectorAll('.faq-trigger').forEach(trigger => {
+                    trigger.addEventListener('click', () => {
+                        const content = trigger.nextElementSibling;
+                        const icon = trigger.querySelector('.faq-icon');
+                        const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+                        // Close all others
+                        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                        if (!isOpen) {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+                window.AURA.animations.initScrollReveal();
+            }
+        });
+    </script>
+</body>
+</html>

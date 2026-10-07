@@ -1,0 +1,62 @@
+/*
+ * aura/css/tokens.css
+ * Definição de variáveis globais do sistema de design.
+ * Lógica: Baseada em materialidade (pedra, terra, floresta).
+ */
+
+:root {
+    /* --- Palette: Neutros (Dominantes ~60%) --- */
+    --color-white: #FBFBFB;
+    --color-stone-light: #F5F5F5;
+    --color-stone: #EBEBEB;
+    --color-stone-dark: #D1D1D1;
+    --color-stone-deep: #BDBDBD;
+
+    /* --- Palette: Apoio e Acento (30% / 10%) --- */
+    --color-terracotta: #8D5B4C;      /* Cor de cerâmica e argila */
+    --color-terracotta-light: #B38B7E;
+    --color-forest: #2D352D;          /* Verde profundo para contraste e luxo */
+    --color-forest-light: #4A564A;
+
+    /* --- Texto e Bordas --- */
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #666666;
+    --color-border: #D1D1D1;
+    --color-border-light: #E5E5E5;
+    --color-surface: #FFFFFF;
+
+    /* --- Tipografia --- */
+    --font-serif: 'Newsreader', serif;
+    --font-sans: 'Hanken Grotesque', sans-serif;
+
+    /* Escala fluida com clamp() para evitar quebras bruscas */
+    --fs-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+    --fs-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+    --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
+    --fs-md: clamp(1.2rem, 1.1rem + 0.25vw, 1.4rem);
+    --fs-lg: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --fs-xl: clamp(2rem, 1.5rem + 3vw, 4.5rem);
+    --fs-xxl: clamp(3rem, 2rem + 5vw, 7rem);
+
+    /* --- Espaçamento (Sistema de 8px) --- */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+    /* --- Easing & Durations (Sistemáticos, sem aleatoriedade) --- */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    --duration-fast: 200ms;
+    --duration-normal: 400ms;
+    --duration-slow: 800ms;
+    --duration-lux: 1200ms;
+
+    /* --- Z-Index --- */
+    --z-below: -1;
+    --z-base: 1;
+    --z-header: 100;
+    --z-drawer: 200;
+    --z-modal: 300;
+}

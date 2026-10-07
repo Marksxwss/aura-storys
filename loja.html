@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja | AURA Curadoria de Design</title>
+    <meta name="description" content="Explore nossa coleção completa de objetos de design, cerâmicas e mobiliário contemporâneo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="bg-aura-white">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <main id="main-content">
+        <!-- Header e Footer injetados via layout.js -->
+
+        <section class="py-20 px-6 bg-aura-stone">
+            <div class="container">
+                <div class="grid-12 items-end reveal">
+                    <div class="col-8">
+                        <h1 class="text-5xl font-serif mb-4">Catálogo de Peças</h1>
+                        <p class="text-aura-text-muted font-light max-w-xl">
+                            Uma seleção rigorosa de objetos que equilibram a precisão técnica com a alma do artesanato brasileiro.
+                        </p>
+                    </div>
+                    <div class="col-4 flex justify-end">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] uppercase tracking-widest font-bold">Ordenar por:</span>
+                            <select id="sort-select" class="bg-transparent border-b border-aura-border py-1 outline-none text-xs uppercase tracking-widest font-medium">
+                                <option value="default">Destaques</option>
+                                <option value="price-asc">Menor Preço</option>
+                                <option value="price-desc">Maior Preço</option>
+                                <option value="newest">Mais Recentes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6">
+            <div class="container catalog-layout">
+                <!-- Sidebar de Filtros -->
+                <aside class="filter-sidebar reveal">
+                    <div class="filter-group">
+                        <h4 class="filter-title">Categorias</h4>
+                        <div class="flex flex-col gap-3 mt-4">
+                            <button class="filter-cat-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-category="all">Todos os Objetos</button>
+                            <button class="filter-cat-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-category="Iluminação">Iluminação</button>
+                            <button class="filter-cat-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-category="Cerâmicas">Cerâmicas</button>
+                            <button class="filter-cat-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-category="Mobiliário">Mobiliário</button>
+                            <button class="filter-cat-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-category="Objetos">Objetos de Arte</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group mt-12">
+                        <h4 class="filter-title">Faixa de Preço</h4>
+                        <div class="flex flex-col gap-3 mt-4">
+                            <button class="filter-price-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-range="low">Até R$ 500</button>
+                            <button class="filter-price-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-range="mid">R$ 500 - R$ 2.000</button>
+                            <button class="filter-price-btn text-left text-sm hover:text-aura-terracotta transition-colors" data-range="high">Acima de R$ 2.000</button>
+                        </div>
+                    </div>
+
+                    <div class="mt-20 p-6 bg-aura-stone text-center">
+                        <p class="text-xs font-medium mb-4 uppercase tracking-widest">Precisa de ajuda?</p>
+                        <a href="contato.html" class="text-xs underline hover:text-aura-terracotta transition-colors">Falar com Consultor</a>
+                    </div>
+                </aside>
+
+                <!-- Grade de Produtos -->
+                <div class="product-grid-container">
+                    <div id="product-grid" class="grid-12 gap-10">
+                        <!-- Injetado via catalog.js -->
+                    </div>
+
+                    <!-- Paginação -->
+                    <div class="flex justify-center mt-20 gap-4" id="pagination">
+                        <!-- Injetado via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/features/cart.js"></script>
+    <script src="js/features/search.js"></script>
+    <script src="js/features/catalog.js"></script>
+    <script src="js/features/product.js"></script>
+    <script src="js/features/checkout.js"></script>
+    <script src="js/features/forms.js"></script>
+    <script src="js/features/cookies.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

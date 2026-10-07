@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigo | AURA Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesque:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="bg-aura-white">
+    <main id="main-content">
+        <article class="py-24 px-6">
+            <div class="container max-w-3xl">
+                <header class="mb-16 reveal">
+                    <span id="article-date" class="text-[10px] uppercase tracking-widest font-bold text-aura-terracotta block mb-4"></span>
+                    <h1 id="article-title" class="text-5xl font-serif mb-8 leading-tight"></h1>
+                    <div class="flex items-center gap-4 border-y border-aura-border py-6">
+                        <div class="w-10 h-10 bg-aura-stone rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1438760126612-44bf4f601336?auto=format&fit=crop&q=80&w=100" alt="Author">
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium">Curadoria AURA</p>
+                            <p class="text-[10px] uppercase tracking-widest text-aura-text-muted">Redação Editorial</p>
+                        </div>
+                    </div>
+                </header>
+
+                <div id="article-content" class="reveal delay-1 space-y-8 text-aura-text-muted font-light text-lg leading-relaxed">
+                    <!-- Injetado via JS -->
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="js/data/config.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/content.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/store.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/features/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('slug');
+
+            const article = window.AURA_DATA.content.journal.find(a => a.slug === slug);
+
+            if (article) {
+                document.getElementById('article-date').innerText = article.data;
+                document.getElementById('article-title').innerText = article.titulo;
+                document.getElementById('article-content').innerHTML = article.texto.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            } else {
+                window.location.href = '404.html';
+            }
+            window.AURA.animations.initScrollReveal();
+        });
+    </script>
+</body>
+</html>

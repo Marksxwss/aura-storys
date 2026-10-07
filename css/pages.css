@@ -1,0 +1,99 @@
+/*
+ * aura/css/pages.css
+ * Estilos específicos para cada página para evitar poluição no components.css.
+ */
+
+/* --- Home Page --- */
+.hero-composition {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.hero-text {
+    grid-column: span 6;
+    z-index: 2;
+}
+
+.hero-image-wrapper {
+    grid-column: span 6;
+    position: relative;
+    offset-left: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path var(--duration-lux) var(--ease-out-expo);
+}
+
+/* --- Loja / Catalog --- */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-xl);
+}
+
+.filter-sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: var(--space-lg);
+}
+
+.filter-title {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-xs);
+}
+
+/* --- Produto Interno --- */
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.product-main-img {
+    grid-column: span 2;
+}
+
+.product-details-sticky {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+/* --- Journal/Blog --- */
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.article-card {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-md);
+}
+
+/* --- Responsividade Específica --- */
+@media (max-width: 1024px) {
+    .catalog-layout {
+        grid-template-columns: 1fr;
+    }
+    .filter-sidebar {
+        position: static;
+    }
+    .hero-text, .hero-image-wrapper {
+        grid-column: span 12;
+    }
+}

@@ -1,0 +1,96 @@
+/*
+ * aura/css/base.css
+ * Reset, Tipografia Base e Acessibilidade.
+ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* --- Tipografia Base --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-text-main);
+}
+
+p {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--duration-normal) var(--ease-out-expo);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+/* --- Acessibilidade --- */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--color-terracotta);
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Foco visível apenas para navegação via teclado */
+:focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 4px;
+}
+
+/* Respecting reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+// removing all movements, keeping only basic opacity fades
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
